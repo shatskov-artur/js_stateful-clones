@@ -25,7 +25,7 @@ function transformStateWithClones(state, actions) {
         break;
 
       default:
-        return 'Error';
+        throw new Error('Unknown action type');
     }
 
     result.push(Object.assign({}, clonedState));
